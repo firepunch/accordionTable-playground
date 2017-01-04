@@ -1,0 +1,64 @@
+<table class="research">
+                <tbody>
+                    <tr class="accordion">
+                        <td colspan="3">This is the header</td>
+                    </tr>
+                    <tr>
+                        <td>Research</td>
+                        <td>Description</td>
+                        <td>Partner</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="research">
+                <tbody>
+                    <tr class="accordion">
+                        <td colspan="3">This is the header</td>
+                    </tr>
+                    <tr>
+                        <td>Research</td>
+                        <td>Description</td>
+                        <td>Partner</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <table class="research">
+                <tbody>
+                    <tr class="accordion">
+                        <td colspan="3">This is the header</td>
+                    </tr>
+                    <tr>
+                        <td>Research</td>
+                        <td>Description</td>
+                        <td>Partner</td>
+                    </tr>
+                    <tr>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                        <td>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+$(function() {
+    var $research = $('.research');
+    $research.find("tr").not('.accordion').hide();
+    $research.find("tr").eq(0).show();
+    
+    $research.find(".accordion").click(function(){
+        $(this).siblings("tr").fadeToggle(500);
+    }).eq(0).trigger('click');
+});
