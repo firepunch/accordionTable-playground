@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang = "en">
+import React from 'react';
 
-   <head>
-      <meta charset = "UTF-8">
-      <title>React App</title>
-   </head>
+class App extends React.Component {
+    render() {
+        return (
+            <div>
+                Hello World!!!
+            </div>
+        );
+    }
+}
 
-   <body>
-      <div id = "app"></div>
-      <script src = "index.js"></script>
-   </body>
-
-</html>
+export default App;
