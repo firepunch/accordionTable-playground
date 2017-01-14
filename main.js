@@ -11,18 +11,28 @@ var ReactBsTable  = require('react-bootstrap-table');
 var BootstrapTable = ReactBsTable.BootstrapTable;
 var TableHeaderColumn = ReactBsTable.TableHeaderColumn;
 
-var products = [{
-    id: 1,
-    name: "Product1",
-    price: 120
-}, {
-    id: 2,
-    name: "Product2",
-    price: 80
-}];
+const products = [];
+
+function addProducts(quantity) {
+    const startId = products.length;
+    for (let i = 0; i < quantity; i++) {
+        const id = startId + i;
+        products.push({
+            id: id,
+            name: 'Item name ' + id,
+            price: 2100 + i
+        });
+    }
+}
+
+addProducts(5);
+
+const cellEditProp = {
+    mode: 'click'
+};
 
 ReactDOM.render(
-    <BootstrapTable data={products} striped hover>
+    <BootstrapTable data={ products } cellEdit={ cellEditProp }>
         <TableHeaderColumn isKey dataField='id'>Product ID</TableHeaderColumn>
         <TableHeaderColumn dataField='name'>Product Name</TableHeaderColumn>
         <TableHeaderColumn dataField='price'>Product Price</TableHeaderColumn>
