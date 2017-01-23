@@ -4,5 +4,5 @@ import DataInsertTypeTable from './App.jsx';
 
 ReactDOM.render(
     <DataInsertTypeTable/>,
-    document.getElementById('basic')
+    document.getElementById('table')
 );
