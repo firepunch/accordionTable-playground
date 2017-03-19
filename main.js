@@ -1,8 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import DataInsertTypeTable from './App.jsx';
+import App from './App.jsx';
 
-ReactDOM.render(
-    <DataInsertTypeTable/>,
-    document.getElementById('table')
-);
+ReactDOM.render(<App />, document.getElementById('app'));
